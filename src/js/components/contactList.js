@@ -3,6 +3,7 @@ import members from './members'
 import Contact from './contact'
 
 export default class ContactList extends React.Component {
+
     constructor () {
 
         super();
@@ -28,13 +29,15 @@ export default class ContactList extends React.Component {
         if (!inputValue) this.setState ( {contactList:members} );
         else this.setState( { contactList: showCont } );
 
+        console.log(isNaN(inputValue));
+
     }
     render() {
 
         return (
 
             <div>
-                <input onChange={ this.toDoFilter().bind(this) }/>
+                <input onChange={this.toDoFilter.bind(this)}/>
                 <ul>
                     {
                         this.state.contactList.map( contact => {

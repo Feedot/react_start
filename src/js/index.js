@@ -4,4 +4,4 @@ import ContactList from './components/contactList'
 
 const app = document.getElementById('app');
 
-ReactDOM.render ( <ContactList/> , app )
+ReactDOM.render( <ContactList/> , app )

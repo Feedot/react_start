@@ -31,6 +31,5 @@ module.exports = {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
         new LiveReloadPlugin(),
-        new HtmlWebpackPlugin(),
     ],
 };
