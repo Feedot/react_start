@@ -9,7 +9,7 @@ export default class ContactList extends React.Component {
             contactList: members
         }
     }
-    findSomthing(e){
+    toDoFilter(e){
         let inputValue = e.target.value,
             showCont = this.state.contactList.filter(contact=>{
             if(contact.name.toLowerCase().indexOf(inputValue)!== -1){
@@ -23,7 +23,7 @@ export default class ContactList extends React.Component {
     render() {
         return (
             <div>
-                <input onChange={this.findSomthing.bind(this)}/>
+                <input onChange={this.toDoFilter().bind(this)}/>
                 <ul>
                     {
                         this.state.contactList.map(contact=>{
