@@ -1,4 +1,5 @@
 const members = [
+
     {
         id:1,
         name: 'Oleh Fedotov',
@@ -23,5 +24,7 @@ const members = [
         phone: '0508273997',
         image:''
     }
+
 ];
+
 export default members;
