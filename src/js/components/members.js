@@ -1,4 +1,4 @@
-const contacts = [
+const members = [
     {
         id:1,
         name: 'Oleh Fedotov',
@@ -24,4 +24,4 @@ const contacts = [
         image:''
     }
 ];
-export default contacts;
+export default members;

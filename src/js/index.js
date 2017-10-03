@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Field from './components/field'
+import ContactList from './components/contactList'
 
 const app = document.getElementById('app');
 
-ReactDOM.render(<Field/>,app)
+ReactDOM.render(<ContactList/>,app)

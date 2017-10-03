@@ -1,12 +1,12 @@
 import React from 'react'
-import contacts from './contacts'
+import members from './members'
 import Contact from './contact'
 
-export default class Field extends React.Component {
+export default class ContactList extends React.Component {
     constructor(){
         super();
         this.state = {
-            contactList: contacts
+            contactList: members
         }
     }
     findSomthing(e){
@@ -16,7 +16,7 @@ export default class Field extends React.Component {
                 return contact;
             }
         })
-        if(!inputValue) this.setState({contactList:contacts});
+        if(!inputValue) this.setState({contactList:members});
         else this.setState({contactList: showCont});
 
     }

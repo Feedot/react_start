@@ -1,7 +1,8 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
-var LiveReloadPlugin = require('webpack-livereload-plugin')
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, "src"),
@@ -21,13 +22,15 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + "/src/",
-        filename: "build.js"
+        path: path.join(__dirname + "/build/"),
+        filename: "build.js",
+        publicPath:"/react_start/"
     },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
         new LiveReloadPlugin(),
+        new HtmlWebpackPlugin(),
     ],
 };
